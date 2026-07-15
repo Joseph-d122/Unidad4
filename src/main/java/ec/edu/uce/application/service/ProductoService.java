@@ -42,6 +42,10 @@ public class ProductoService {
         return Producto.findById(id);
     }
 
+    public List<Producto> buscarTodos(){
+        return (List<Producto>) this.productoReporitoryImpl.findAll();
+    }
+
     public void actualizarProducto(Producto prodActualizado, Integer id){
         Producto prodBase = this.buscarProductoPorId(id);
         prodBase.setNombre(prodActualizado.getNombre());
