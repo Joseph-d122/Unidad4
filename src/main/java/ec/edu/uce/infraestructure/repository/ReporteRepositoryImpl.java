@@ -7,6 +7,6 @@ import jakarta.transaction.Transactional;
 
 @Transactional
 @ApplicationScoped
-public class ReposrteRepositoryImpl implements PanacheRepositoryBase<Reporte, Integer> {
+public class ReporteRepositoryImpl implements PanacheRepositoryBase<Reporte, Integer> {
 
 }
