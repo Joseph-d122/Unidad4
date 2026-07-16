@@ -3,7 +3,7 @@ package ec.edu.uce.application.service;
 import java.util.List;
 
 import ec.edu.uce.domain.model.Reporte;
-import ec.edu.uce.infraestructure.repository.ReposrteRepositoryImpl;
+import ec.edu.uce.infraestructure.repository.ReporteRepositoryImpl;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
@@ -13,11 +13,11 @@ import jakarta.transaction.Transactional;
 public class ReporteService {
 
     @Inject
-    private ReposrteRepositoryImpl reposrteRepositoryImpl;
+    private ReporteRepositoryImpl reposrteRepositoryImpl;
 
 
     public List<Reporte> buscarTodos(){
-        return (List<Reporte>) this.reposrteRepositoryImpl.findAll();
+    return this.reposrteRepositoryImpl.findAll().list();
     }
 
     //@MedirTiempo
